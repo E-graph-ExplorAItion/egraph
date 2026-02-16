@@ -29,10 +29,9 @@ export async function POST(request: NextRequest) {
       tlsOptions: { rejectUnauthorized: false },
       connTimeout: 60000,
       authTimeout: 60000,
-      socketTimeout: 60000,
     });
 
-    return new Promise((resolve) => {
+    return new Promise<NextResponse>((resolve) => {
       imap.once("ready", () => {
         console.log(`✅ IMAP connection successful for ${email}`);
 

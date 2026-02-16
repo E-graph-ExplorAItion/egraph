@@ -8,7 +8,7 @@
 
 | Dashboard View | Conversation View |
 |:---:|:---:|
-| ![Dashboard](/public/demo.png) | ![Conversation](/public/demo2.png) |
+| ![Dashboard](/public/demograph.png) | ![Conversation](/public/demosummary.png) |
 
 ## �🚀 Key Features
 
@@ -57,6 +57,7 @@ Follow these steps to get Egraph running locally on your machine.
     Create a `.env.local` file in the root directory and add your OpenRouter API key:
     ```bash
     OPENROUTER_API_KEY="your_openrouter_api_key_here"
+    ENCRYPTION_KEY="default_secret_key_change_me_plz"
     ```
 
 4.  **Run the development server:**
@@ -79,16 +80,6 @@ Follow these steps to get Egraph running locally on your machine.
     *   **Sales Nodes** (Purple): Represent your sales team members. Click to view their full inbox and conversation list.
     *   **Client Nodes** (Blue): Represent external clients.
     *   **Edges**: Show active communication channels.
-5.  **Get AI Insights**:
-    *   **In-App**: Click the **"✨ AI Summary"** button inside any conversation view to get an instant analysis of the deal status.
-    *   **CLI**: Use the included script to generate summaries directly from your terminal:
-        ```bash
-        ./openrouter.sh "Paste email text here..."
-        ```
-
-## 🔒 Security Note
-
-This application stores email credentials and content in a local SQLite database (`egraph.db`). Ensure this file is excluded from version control (it is added to `.gitignore` by default) and handle the production database with appropriate security measures.
 
 ## 📄 License
 
